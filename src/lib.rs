@@ -1,5 +1,4 @@
 //! [`SockJS`](https://github.com/sockjs/sockjs-client) server
-//! for [Actix](https://github.com/actix/actix)
 
 #[macro_use]
 extern crate log;
