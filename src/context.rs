@@ -220,7 +220,7 @@ impl<A> Future for SockJSContext<A> where A: Session<Context=Self>
 
         match self.inner.poll(ctx) {
             Ok(Async::NotReady) => {
-                // sockjs channel
+                // sockjs channels
                 loop {
                     match self.rx.poll() {
                         Ok(Async::Ready(Some(msg))) => {
