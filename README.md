@@ -87,7 +87,6 @@ fn main() {
     HttpServer::new(move || {
         let manager = sm.clone();
         Application::new()
-            // register SockJS application
             .handler(
                 "/sockjs/", sockjs::SockJS::new(manager.clone()))})
         .bind("127.0.0.1:8080").unwrap()
